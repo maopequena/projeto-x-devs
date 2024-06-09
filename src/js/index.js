@@ -1,11 +1,11 @@
-const btnAvancar = document.getElementById('btn-avancar'); //A1
+const btnAvancar = document.getElementById("btn-avancar"); //A1
+const btnVoltar = document.getElementById("btn-voltar"); //B1
 let cartaoAtual = 0; 
-const cartoes = document.querySelectorAll('.cartao'); //A3 e B3
-const btnVoltar = document.getElementById('btn-voltar'); //B1
+const cartoes = document.querySelectorAll(".cartao"); //A3 e B3
 
-btnAvancar.addEventListener('click', function(){ //A2
-    const ehUltimoCartao = cartaoAtual === cartoes.length - 1
-    if(ehUltimoCartao) return; 
+btnAvancar.addEventListener("click", function () { //A2
+    const ehUltimoCartao = cartaoAtual === cartoes.length - 1;
+    if (ehUltimoCartao) return; 
 
     esconderCartaoSelecionado(); //A4
 
@@ -13,7 +13,7 @@ btnAvancar.addEventListener('click', function(){ //A2
     mostrarCartao();
 });
 
-btnVoltar.addEventListener('click', function(){ //B2
+btnVoltar.addEventListener("click", function () { //B2
     const ehPrimeiroCartao = cartaoAtual === 0;
     if(ehPrimeiroCartao) return;
     
@@ -24,11 +24,10 @@ btnVoltar.addEventListener('click', function(){ //B2
 });
 
 function mostrarCartao() {
-    cartoes[cartaoAtual].classList.add('selecionado');
-};
+    cartoes[cartaoAtual].classList.add("selecionado");
+}
 
 function esconderCartaoSelecionado() {
-    const cartaoSelecionado = document.querySelector('selecionado');
-
-    cartaoSelecionado.classList.remove('selecionado');
-};
+    const cartaoSelecionado = document.querySelector(".selecionado");
+    cartaoSelecionado.classList.remove("selecionado");
+}
